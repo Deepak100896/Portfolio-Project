@@ -19,7 +19,9 @@ from django.urls import path
 #import below two lines for the static media that needs to be searched
 from django.conf import settings
 from django.conf.urls.static import static
+import Jobs.views
 
 urlpatterns = [
+    path('', Jobs.views.home, name='home'),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

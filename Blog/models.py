@@ -1,5 +1,4 @@
 from django.db import models
-
 from datetime import datetime
 # Below are the steps that we need to follow
 # Crete Blog model
@@ -11,6 +10,7 @@ from datetime import datetime
 
 class Blog(models.Model):
     title = models.CharField(max_length=255)
-    pub_date = datetime.today().strftime('%Y-%m-%d')
+    #pub_date = datetime.today().strftime('%Y-%m-%d')
+    pub_date = models.DateTimeField(default=datetime.now, blank=True)
     body = models.TextField()
     image = models.ImageField(upload_to='images/')
