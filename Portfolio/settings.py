@@ -138,3 +138,9 @@ MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
 # It's not neccessary that it should be media only, you can rename it to coolstuff
 
 MEDIA_URL= '/media/'
+
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
