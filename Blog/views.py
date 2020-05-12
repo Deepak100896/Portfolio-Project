@@ -4,7 +4,7 @@ from .models import Blog
 def AllBlogs(request):
     Blogs = Blog.objects
     #We have to pass the Blogs as a key which can be used to access the value in html file.
-    return render(request, 'Blog/Allblogs.html',{'Blogs':Blogs})
+    return render(request, 'Blog/AllBlogs.html',{'Blogs':Blogs})
 
 
 #We can use the blog_id too retuen the data w.r.t to that blog id and show it in the browser
